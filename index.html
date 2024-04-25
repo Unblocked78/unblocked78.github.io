@@ -10,13 +10,27 @@
             background-size: cover; 
             background-position: center center; 
             /* Add any other styling you need */
+            margin: 0; /* Reset default margin */
+            padding: 0; /* Reset default padding */
+        }
+        button {
+            background: none; /* Remove default button background */
+            border: none; /* Remove button border */
+            cursor: pointer; /* Change cursor on hover */
         }
     </style>
 </head>
 <body>
-    <button>
+    <button id="ProxyButton">
         <img src="CroxyProxy.png" alt="CroxyProxy Button">
-      </button>
-      </a>
+    </button>
+
+    <script>
+        // JavaScript to trigger file download
+        document.getElementById('ProxyButton').addEventListener('click', function() {
+            // Replace 'path_to_your_file' with the actual path to your file
+            window.location.href = 'CroxyProxy.html';
+        });
+    </script>
 </body>
 </html>
