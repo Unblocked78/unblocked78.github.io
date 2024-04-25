@@ -14,7 +14,7 @@
             flex-direction: column;
             justify-content: space-between;
             background-image: url('Background.gif'), url('FloorImage.png');
-            background-size: contain, auto;
+            background-size: cover, auto; /* Use cover for the first image */
             background-position: center center, bottom;
             background-repeat: no-repeat;
         }
@@ -35,11 +35,15 @@
         <img src="CroxyProxy.png" alt="CroxyProxy Button">
     </button>
 
+    <div id="contentToToggle">
+        This content will be toggled.
+    </div>
+
     <script>
-        // JavaScript to toggle content when button is clicked, copy and paste this for more buttons. replace the content to toggle with the file path.
+        // JavaScript to toggle content when button is clicked
         document.getElementById('toggleButton').addEventListener('click', function() {
-            var content = document.getElementById('contentToToggle1');
-            if (content.style.display === 'none') {
+            var content = document.getElementById('CroxyProxy.html');
+            if (content.style.display === 'none' || content.style.display === '') {
                 content.style.display = 'block'; // Show the content
             } else {
                 content.style.display = 'none'; // Hide the content
