@@ -21,15 +21,24 @@
     </style>
 </head>
 <body>
-    <button id="ProxyButton">
+    <button id="toggleButton">
         <img src="CroxyProxy.png" alt="CroxyProxy Button">
     </button>
 
+    <div id="contentToToggle" style="display: none;">
+        <!-- Content to be toggled -->
+        This content will be toggled.
+    </div>
+
     <script>
-        // JavaScript to trigger file download
-        document.getElementById('ProxyButton').addEventListener('click', function() {
-            // Replace 'path_to_your_file' with the actual path to your file
-            window.location.href = 'CroxyProxy.html';
+        // JavaScript to toggle content when button is clicked
+        document.getElementById('toggleButton').addEventListener('click', function() {
+            var content = document.getElementById('CroxyProxy.png');
+            if (content.style.display === 'none') {
+                content.style.display = 'block'; // Show the content
+            } else {
+                content.style.display = 'none'; // Hide the content
+            }
         });
     </script>
 </body>
