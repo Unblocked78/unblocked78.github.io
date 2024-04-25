@@ -6,17 +6,27 @@
     <title>Unblocked852</title>
     <style>
         body {
-            background-image: url('Background.gif');
-            background-size: cover; 
-            background-position: center center; 
-            /* Add any other styling you need */
+            background-color: #f0f0f0; /* Set a light background color */
             margin: 0; /* Reset default margin */
             padding: 0; /* Reset default padding */
+            display: flex;
+            min-height: 100vh;
+            flex-direction: column;
+            justify-content: space-between;
+            background-image: url('Background.gif'), url('FloorImage.png');
+            background-size: contain, auto;
+            background-position: center center, bottom;
+            background-repeat: no-repeat;
         }
         button {
             background: none; /* Remove default button background */
             border: none; /* Remove button border */
             cursor: pointer; /* Change cursor on hover */
+        }
+        #contentToToggle {
+            display: none; /* Hide initially */
+            padding: 20px; /* Add padding for visibility */
+            background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
         }
     </style>
 </head>
@@ -25,15 +35,10 @@
         <img src="CroxyProxy.png" alt="CroxyProxy Button">
     </button>
 
-    <div id="contentToToggle" style="display: none;">
-        <!-- Content to be toggled -->
-        This content will be toggled.
-    </div>
-
     <script>
-        // JavaScript to toggle content when button is clicked
+        // JavaScript to toggle content when button is clicked, copy and paste this for more buttons. replace the content to toggle with the file path.
         document.getElementById('toggleButton').addEventListener('click', function() {
-            var content = document.getElementById('CroxyProxy.png');
+            var content = document.getElementById('contentToToggle1');
             if (content.style.display === 'none') {
                 content.style.display = 'block'; // Show the content
             } else {
