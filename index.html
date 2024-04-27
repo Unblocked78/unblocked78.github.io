@@ -28,27 +28,35 @@
             padding: 20px; /* Add padding for visibility */
             background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
         }
+        textarea {
+            width: 100%;
+            height: 200px;
+            margin-top: 20px;
+        }
     </style>
 </head>
 <body>
-    <button id="toggleButton">
+    <button id="toggleButton" onclick="toggleDevMode()">
         <img src="ProxyLogo.png" alt="Proxy Button">
     </button>
 
-    <div id="Proxy.html">
-        This content will be toggled.
+    <div id="contentToToggle">
+        <h2>Developer Mode</h2>
+        <p>Add your code below:</p>
+        <textarea id="codeInput"></textarea>
+        <button onclick="executeCode()">Execute Code</button>
     </div>
 
     <script>
-        // JavaScript to toggle content when button is clicked
-        document.getElementById('toggleButton').addEventListener('click', function() {
-            var content = document.getElementById('Proxy.html');
-            if (content.style.display === 'none' || content.style.display === '') {
-                content.style.display = 'block'; // Show the content
-            } else {
-                content.style.display = 'none'; // Hide the content
-            }
-        });
+        function toggleDevMode() {
+            var content = document.getElementById('contentToToggle');
+            content.style.display = content.style.display === 'none' ? 'block' : 'none';
+        }
+
+        function executeCode() {
+            var codeInput = document.getElementById('codeInput').value;
+            eval(codeInput); // Execute the provided code
+        }
     </script>
 </body>
 </html>
