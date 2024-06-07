@@ -46,12 +46,6 @@
     </style>
 </head>
 <body>
-    <a href="#" id="toggleButton" onclick="toggleDevMode()">
-        <img src="Images/Devmode.png" alt="Devmode Button"
-            width="200"
-            height="200"
-            >
-    </a>
 
     <div id="contentToToggle">
         <h2>Developer Mode</h2>
@@ -60,17 +54,6 @@
         <button onclick="executeCode()">Execute Code</button>
     </div>
 
-    <script>
-        function toggleDevMode() {
-            var content = document.getElementById('contentToToggle');
-            content.style.display = content.style.display === 'none' ? 'block' : 'none';
-        }
-
-        function executeCode() {
-            var codeInput = document.getElementById('codeInput').value;
-            eval(codeInput); // Execute the provided code
-        }
     <iframe src="https://167.71.43.43" width="800" height="600" frameborder="0" allowfullscreen></iframe>
-    </script>
 </body>
 </html>
